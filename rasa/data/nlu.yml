@@ -1,0 +1,297 @@
+version: "2.0"
+
+nlu:
+
+  - intent: pozdrav
+    examples: |
+      - ahoj
+      - cus
+      - dobry den
+      - zdar
+      - cau
+
+  - intent: rozlouceni
+    examples: |
+      - mej se
+      - zatim
+      - mej se hezky
+      - nashle
+      - nashledanou
+      - prijemny zbytek dne
+      - preji krasny den
+      - zase nekdy
+      - zdravim
+
+  - intent: sance_na_prijeti
+    examples: |
+      - Jaka bude sance na prijeti?
+      - Jakou mam sanci na prijeti?
+      - Jaka bude sance na prijeti?
+      - jakou mam sanci na prijeti?
+      - jakou mam sanci na prijeti
+
+  - intent: obory
+    examples: |
+      - Jake jsou na skole obory.
+      - jaky jsou obory?
+      - co se zde studuje za obory?
+      - Co tu je za obory?
+
+  - intent: kontaktni_udaje
+    examples: |
+      - Kde najdu kontakt na skolu?
+      - Jak ziskam kontakt na sekretariat?
+
+  - intent: prihlaska
+    examples: |
+      - Kolik prihlasek muzu podat?
+      - prihlasek podat.
+      - druhy
+      - prvni
+      - 1
+      - 2
+
+  - intent: prihlaska_osobni
+    examples: |
+      - Co musi prihlaska obsahovat?
+      - Jak mam vyplnit prihlasku?
+      - Co ma obsahovat spravne vyplnena prihlaska?
+      - vyplnit - obsah
+
+
+  - intent: prihlaska_odevzdat
+    examples: |
+      - Kdy je termin na podani prihlasek?
+      - Kdy mam odevzdat prihlasky?
+      - K jakemu datu se odevzdavaji prihlasky?
+      - Do kdy je treba podat prihlasky k prijimacimu rizeni?
+      - odevdzat
+      - termin
+
+  - intent: prihlaska_zpusob
+    examples: |
+      - Co mam vyplnit v prihlasce v kolonce studijni obor, kód a nazev?
+      - Co je treba vyplnit v kolonkach studijni obor, kód a nazev?
+      - Co se musi vyplnit v kolonce studijni obor, kód a nazev?
+      - kód
+
+  - intent: prihlaska_lekar
+    examples: |
+      - Je potreba mit k prihlasce potvrzeni od lekare?
+      - Musim k prihlasce dodat lekarske potvrzeni?
+      - Potrebuje skola k prihlasce potvrzeni lekare?
+      - lekar
+
+  - intent: prihlaska_kdo
+    examples: |
+      - Je pravda, ze prihlasku ke studiu si musi uchazec poslat na Ss sam?
+      - Kdo musi dorucit prihlasku ke studiu na stredni skole?
+      - Podava prihlasku zak nebo rodice?
+
+  - intent: prihlaska_poplatek
+    examples: |
+      - Plati se pri podani prihlasky spravni poplatek?
+      - Plati se nejake spravni poplatky?
+      - poplatek
+
+  - intent: prihlaska_sehnat
+    examples: |
+      - Kde sezenu prihlasku ke studiu?
+      - Kde najdu prihlasku ke studiu?
+      - Kde hledat studijni prihlasku?
+      - sehnat
+      - hledat
+
+  - intent: prihlaska_potvrdit
+    examples: |
+      - Musi byt prihlaska potvrzena Zs?
+      - Je treba mit prihlasku potvrzenou od zakladni skoly?
+      - Musi byt na prihlasce potvrzeni od skoly?
+
+  - intent: prihlaska_elektro
+    examples: |
+      - Muzu podat elektronicky prihlasku?
+      - Lze podat prihlasku elektronicky?
+      - Je moznost podani prihlasky elektronicky?
+      - elektronicky?
+
+  - intent: prihlaska_studium
+    examples: |
+      - Jak se mohu na  skolu prihlasit?
+      - Jakym zpusobem se mohu na skolu prihlasit?
+      - Co musim udelat, abych byl prihlasen ke studiu?
+
+  - intent: prijimaci_zkousky
+    examples: |
+      - Kolik bude terminu na prijimaci zkousku?
+      - Kolik budu mit pokusu k prijimackam?
+      - Koik terminu?
+
+  - intent: prijimaci_zkousky_pozvanka
+    examples: |
+      - Kdy mi prijde pozvanka ke zkousce?
+      - Kdy dostanu pozvani ke zkousce?
+      - Kdy pozvani?
+
+  - intent: prijimaci_zkousky_nemuzu
+    examples: |
+      - Co mam delat, kdyz nemuzu prijit na prijimacky?
+      - Co mam delat, kdyz se nemohu zucastnit prijimacek?
+      - Jak mam postupovat, kdyz se nemohu dostavit ke zkousce?
+
+  - intent: prijimaci_zkousky_vysledky
+    examples: |
+      - Kdy zjistim, jak jsem u zkousky dopadl?
+      - Kdy se dozvim, jak dopadli zkousky?
+      - Kdy uvidim vysledky zkousky?
+      - Kdy vysledky?
+
+  - intent: prijimaci_zkousky_kdo
+    examples: |
+      - Koho se tykaji jednotne zkousky CERMAT?
+      - Kdo se muze ucastnit prijimacich zkousek?
+      - Komu je umoznen pristup k prijimacimu rizeni?
+
+  - intent: prijimaci_zkousky_predmety
+    examples: |
+      - Z ceho se delaji prijimaci zkousky?
+      - Z jakych predmetu budu zkousen u prijimaciho rizeni?
+      - Z ceho je slozena prijimaci zkouska?
+
+  - intent: prijimaci_zkousky_skola
+    examples: |
+      - Konaji se na vasi skolu prijimaci zkousky?
+      - Pisou se prijimacky?
+      - Kona se prijimaci rizeni na vasi skole?
+
+  - intent: prijimaci_zkousky_datum
+    examples: |
+      - Kdy se zkousky budou konat?
+      - Kdy se pisou prijimacky?
+      - Kdy jsou prijimacky?
+
+  - intent: prijimaci_zkousky_misto
+    examples: |
+      - Kde muzu najit vysledky prijimacek?
+      - Kde se muzu dozvedet vysledky prijimacich zkousek?
+      - Kde se dozvim vysledky?
+
+  - intent: podminky_prijeti
+    examples: |
+      - Kdy budou zverejnena kriteria k prijeti?
+      - Kdy uvidim podminky pro prijeti?
+
+  - intent: zapisovy_listek
+    examples: |
+      - Co to je zapisovy listek?
+      - K cemu slouzi zapisovy listek?
+      - K cemu je zapisovy listek?
+      - Jaka je funkce zapisoveho listku?
+
+  - intent: zapisovy_listek_sehnat
+    examples: |
+      - Kdo mi zapisovy listek vyda?
+      - Kde sezenu zapisovy listek?
+      - Jak se dostanu k zapisovemu listku?
+
+  - intent: zapisovy_listek_pocet
+    examples: |
+      - Kolikrat muzu podat zapisovy listek?
+      - Kolikrat mohu listek podat?
+      - Kolik muzu podat zapisovych listku?
+
+  - intent: zapisovy_listek_ztrata
+    examples: |
+      - Co se stane, kdyz zapisovy listek ztratim?
+      - Jak postupovat v pripade ztraty zapisoveho listku?
+      - Co delat, kdyz ztratim zapisovy listek?
+      - ztrata listku
+
+  - intent: zapisovy_listek_kdy
+    examples: |
+      - Dokdy musim podat zapisovy listek?
+      - Kdy musi byt podan zapisovy listek?
+
+  - intent: neprijeti
+    examples: |
+      - Co mam delat, kdyz me neprijali na vybranou stredni skolu?
+      - Co mam delat, neprijali me.
+      - Co muzu delat, kdyz jsem nebyl prijat na moji skolu?
+      - Jak postupovat pri neprijeti na mnou vybranou skolu?
+
+  - intent: neprijeti_zasady
+    examples: |
+      - Jake jsou zasady pro uspesne odvolani?
+      - Kdy dosahnu prijeti po podani odvolani?
+      - Za jakych podminek dopadne odvolani dobre?
+
+  - intent: studium_na_skole
+    examples: |
+      - Muzu menit zamereni behem studia?
+      - Mohu si zmenit zamereni studia behem skoly?
+      - Lze zmenit obor v probihajicim rocniku?
+
+  - intent: studium_na_skole_ubytovani
+    examples: |
+      - Ma skola internat/domov mladeze?
+      - Existuje moznost ubytovani ke skole?
+      - Umozňuje skola ubytovani svym studentum?
+
+  - intent: studium_na_skole_finance
+    examples: |
+      - Plati se na skole skolne?
+      - Plati se za studium?
+      - Je skola placena?
+      - skolne?
+
+  - intent: studium_na_skole_dalkovy
+    examples: |
+      - Ma skola dalkove studium?
+      - Nabizi skola dalkove studium?
+      - Je moznost studovat dalkove?
+      - dalkove studium?
+
+  - intent: studium_na_skole_pocet_zaku
+    examples: |
+      - Kolik je studentu na skole?
+      - Kolik studuje lidi ve skole?
+      - kolik lidi na skole?
+      - kolik studentu?
+
+  - intent: studium_na_skole_maturity
+    examples: |
+      - Kolik procent je uspesnost u maturit?
+      - Jaka je uspesnost u maturit?
+      - zvlada se maturita?
+
+  - intent: studium_na_skole_souteze
+    examples: |
+      - Je mozne se zucastnit na soutezich?
+      - ucastni se zaci meziskolnich soutezi?
+      - souteze?
+
+  - intent: po_skole
+    examples: |
+      - Jak se mohu uplatnit po skole?
+      - Co muzu delat po skole?
+      - Jaka je sance studovat vysokou skolu po ukonceni studia?
+      - S jakou pravdepodobnostni dokoncim po skole vysokoskolske vzdelani?
+      - Ma smysl jit studovat vysokou skolu po studiu na teto skole?
+
+  - intent: adaptacni_kurz
+    examples: |
+      - Kona se po nastupu na skolu adapticky kurz?
+      - Porada skola adapťak?
+      - Mam moznost seznamit se se spoluzaky na adaptivnim kurzu?
+      - adaptak?
+
+  - intent: kontaktni_udaje_reditelka
+    examples: |
+      - Kdo je reditelka?
+      - reditelka?
+      - Reditelka skoly?
+
+  - intent: uspesnost_statnich_maturit
+    examples: |
+      - Jaka je uspesnost u statnich maturit?
+      - statni maturita

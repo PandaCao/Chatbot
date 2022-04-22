@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chatbot</title>
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .chat-btn {
+            position: absolute;
+            right: 14px;
+            bottom: 30px;
+            cursor: pointer;
+        }
+
+        .chat-btn i {
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .chat-btn {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            background-color: #20c19e;
+            color: #fff;
+            font-size: 22px;
+            border: none;
+        }
+
+        .wrapper {
+            position: absolute;
+            right: 20px;
+            bottom: 100px;
+            width: 300px;
+            background-color: #fff;
+            opacity: 0;
+            transition: all 0.4s;
+            border-radius: 13px;
+
+        }
+
+        .chat {
+            overflow-y: scroll;
+            min-height: 250px;
+            height: 250px;
+            overflow: auto;
+        }
+
+        .chat-header {
+            background-color: #434f58;
+            height: 50px;
+            border-top-right-radius: 13px;
+            border-top-left-radius: 13px;
+            color: white;
+        }
+
+        #check:checked ~ .wrapper {
+            opacity: 1;
+        }
+
+        button {
+            margin-bottom: 10px;
+        }
+
+        .form-control:focus,
+        .btn:focus {
+            box-shadow: none;
+        }
+
+        .btn,
+        .btn:focus,
+        .btn:hover {
+            background-color: blue;
+            border: blue;
+        }
+
+        #check {
+            display: none;
+        }
+
+        b {
+            font-size: 20px;
+            margin: 10px;
+            position: absolute;
+
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .inputText {
+            border-radius: 40px;
+            margin: 10px;
+
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+
+        .button {
+            background-color: #20c19e;
+            border: none;
+            color: white;
+            text-align: center;
+            padding: 7px 12px;
+            border-radius: 10px;
+        }
+
+        .button:active {
+            transform: translateY(3px);
+        }
+
+        .chat-bottom {
+            background-color: #434f58;
+            border-bottom-left-radius: 13px;
+            border-bottom-right-radius: 13px;
+        }
+
+
+        .uzivatel {
+            text-align: right;
+            background-color: #d9e8e8;
+            padding: 8px;
+            padding-right: 15px;
+
+        }
+
+        .bot {
+            text-align: left;
+            background-color: #66e0a3;
+            padding: 8px;
+            padding-left: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+<input type="checkbox" id="check" onclick="focusMethod()">
+<label class="chat-btn" for="check"> </label>
+<div class="wrapper">
+    <div class="chat-header">
+        <b>RasaChatbot</b>
+    </div>
+    <div class="chat" id="chat">
+
+    </div>
+    <div class="chat-bottom">
+        <input type="text" class="inputText" id="chatMsg">
+        <button class="button" name="Odeslat" onclick="onbtnclick()" id="Odeslat">Odeslat</button>
+    </div>
+</div>
+
+
+<script>
+
+
+    let otevreno = true;
+    focusMethod = function getFocus() {
+        if (otevreno) {
+            document.getElementById("chatMsg").focus();
+            otevreno = false;
+        } else {
+            otevreno = true;
+        }
+    }
+    const messages = document.getElementById("chat");
+
+
+    const input = document.getElementById("chatMsg");
+    input.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("Odeslat").click();
+        }
+    });
+
+
+    function scrollToBottom() {
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    function onbtnclick() {
+        const x = document.getElementById("chatMsg");
+        if (x.value != "") {
+            const newElement = document.createElement('p');
+            newElement.className = "uzivatel";
+            newElement.innerHTML = x.value;
+            document.getElementById("chat").appendChild(newElement);
+
+            scrollToBottom();
+
+            const Val = {"sender": "test_user", "message": x.value};
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:5005/webhooks/rest/webhook/", true);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("Authorization", "key");
+            const obj = JSON.stringify(Val);
+            let start_time = new Date().getTime();
+            xhr.send(obj);
+            console.log(obj);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        console.log('Time elapsed:', (new Date().getTime() - start_time) / 1000);
+                        console.log(xhr.responseText);
+                        const obj = JSON.parse(xhr.responseText);
+                        const newElement = document.createElement('p');
+                        newElement.className = "bot";
+                        const obj2 = obj[0];
+                        newElement.innerHTML = obj2.text;
+                        document.getElementById("chat").appendChild(newElement);
+                        scrollToBottom();
+                    }
+                }
+            }
+            document.getElementById('chatMsg').value = '';
+        }
+    }
+</script>
+
+</body>
+</html>

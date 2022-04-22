@@ -1,0 +1,4 @@
+https://dev.to/petr7555/rasa-rest-api-4kp6 --blog od petra
+https://www.youtube.com/watch?v=rS4Wb8hvggI --databaze Ind
+https://www.youtube.com/watch?v=_uVBRDt6Euw --zacatek konverzace
+https://www.youtube.com/watch?v=1cq7TerQaXI --custom actions

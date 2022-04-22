@@ -1,0 +1,106 @@
+version: "2.0"
+
+intents:
+  - pozdrav
+  - rozlouceni
+  - sance_na_prijeti
+  - obory
+  - kontaktni_udaje
+  - prihlaska
+  - prihlaska_osobni
+  - prihlaska_odevzdat
+  - prihlaska_zpusob
+  - prihlaska_lekar
+  - prihlaska_kdo
+  - prihlaska_poplatek
+  - prihlaska_sehnat
+  - prihlaska_potvrdit
+  - prihlaska_elektro
+  - prihlaska_studium
+  - prijimaci_zkousky
+  - prijimaci_zkousky_pozvanka
+  - prijimaci_zkousky_nemuzu
+  - prijimaci_zkousky_vysledky
+  - prijimaci_zkousky_kdo
+  - prijimaci_zkousky_predmety
+  - prijimaci_zkousky_skola
+  - prijimaci_zkousky_datum
+  - prijimaci_zkousky_misto
+  - podminky_prijeti
+  - zapisovy_listek
+  - zapisovy_listek_sehnat
+  - zapisovy_listek_pocet
+  - zapisovy_listek_ztrata
+  - zapisovy_listek_kdy
+  - neprijeti
+  - neprijeti_zasady
+  - studium_na_skole
+  - studium_na_skole_ubytovani
+  - studium_na_skole_finance
+  - studium_na_skole_dalkovy
+  - studium_na_skole_pocet_zaku
+  - studium_na_skole_maturity
+  - studium_na_skole_souteze
+  - po_skole
+  - adaptacni_kurz
+  - kontaktni_udaje_reditelka
+  - uspesnost_statnich_maturit
+  - nlu_fallback
+  - action_unlikely_intent
+
+actions:
+  - action_pozdrav
+  - action_obory
+  - action_rozlouceni
+  - action_sance_na_prijeti
+  - action_kontaktni_udaje
+  - action_prihlaska
+  - action_prihlaska_osobni
+  - action_prihlaska_odevzdat
+  - action_prihlaska_studium
+  - action_prihlaska_lekar
+  - action_prihlaska_zpusob
+  - action_prihlaska_kdo
+  - action_prihlaska_poplatek
+  - action_prihlaska_sehnat
+  - action_prihlaska_potvrdit
+  - action_prihlaska_elektro
+  - action_prijimaci_zkousky
+  - action_prijimaci_zkousky_pozvanka
+  - action_prijimaci_zkousky_nemuzu
+  - action_prijimaci_zkousky_vysledky
+  - action_prijimaci_zkousky_kdo
+  - action_prijimaci_zkousky_predmety
+  - action_prijimaci_zkousky_skola
+  - action_prijimaci_zkousky_datum
+  - action_prijimaci_zkousky_misto
+  - action_podminky_prijeti
+  - action_zapisovy_listek
+  - action_zapisovy_listek_sehnat
+  - action_zapisovy_listek_pocet
+  - action_zapisovy_listek_ztrata
+  - action_zapisovy_listek_kdy
+  - action_neprijeti
+  - action_neprijeti_zasady
+  - action_studium_na_skole
+  - action_studium_na_skole_ubytovani
+  - action_studium_na_skole_finance
+  - action_studium_na_skole_dalkovy
+  - action_studium_na_skole_pocet_zaku
+  - action_studium_na_skole_maturity
+  - action_studium_na_skole_souteze
+  - action_po_skole
+  - action_adaptacni_kurz
+  - action_kontaktni_udaje_reditelka
+  - action_uspesnost_statnich_maturit
+
+responses:
+  utter_out_of_scope:
+    - text: "Omlouvám se, prozatím nedokážu odpovědět na tuto otázku."
+
+  utter_action_default_fallback:
+    - text: "Nerozumím, mohl by jste danou otázku zopakovat?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

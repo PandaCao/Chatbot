@@ -1,0 +1,32 @@
+version: "2.0"
+
+policies:
+  - name: RulePolicy
+
+rules:
+  - rule: Pozdrav
+    conversation_start: true
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+
+  - rule: Rouzloceni
+    conversation_start: false
+    steps:
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - rule: obory
+    steps:
+      - intent: obory
+      - action: action_obory
+
+  - rule: Kdyz nerozezna
+    steps:
+      - intent: nlu_fallback
+      - action: utter_action_default_fallback
+
+  - rule: Kdyz nerozezna2
+    steps:
+      - intent: action_unlikely_intent
+      - action: utter_action_default_fallback

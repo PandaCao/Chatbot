@@ -1,0 +1,382 @@
+version: "2.0"
+
+stories:
+
+  - story: pozdrav
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: sance_na_prijeti
+      - action: action_sance_na_prijeti
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: obory
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: obory
+      - action: action_obory
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: kontaktni_udaje
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: kontaktni_udaje
+      - action: action_kontaktni_udaje
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+
+  - story: prihlaska
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska
+      - action: action_prihlaska
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_osobni
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_osobni
+      - action: action_prihlaska_osobni
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_odevzdat
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_odevzdat
+      - action: action_prihlaska_odevzdat
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_zpusob
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_zpusob
+      - action: action_prihlaska_zpusob
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_lekar
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_lekar
+      - action: action_prihlaska_lekar
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_kdo
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_kdo
+      - action: action_prihlaska_kdo
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_poplatek
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_poplatek
+      - action: action_prihlaska_poplatek
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_sehnat
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_sehnat
+      - action: action_prihlaska_sehnat
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_potvrdit
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_potvrdit
+      - action: action_prihlaska_potvrdit
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_elektro
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_elektro
+      - action: action_prihlaska_elektro
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prihlaska_studium
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prihlaska_studium
+      - action: action_prihlaska_studium
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky
+      - action: action_prijimaci_zkousky
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_misto
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_misto
+      - action: action_prijimaci_zkousky_misto
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_pozvanka
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_pozvanka
+      - action: action_prijimaci_zkousky_pozvanka
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_nemuzu
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_nemuzu
+      - action: action_prijimaci_zkousky_nemuzu
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_vysledky
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_vysledky
+      - action: action_prijimaci_zkousky_vysledky
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_kdo
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_kdo
+      - action: action_prijimaci_zkousky_kdo
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_predmety
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_predmety
+      - action: action_prijimaci_zkousky_predmety
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_skola
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_skola
+      - action: action_prijimaci_zkousky_skola
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: prijimaci_zkousky_datum
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: prijimaci_zkousky_datum
+      - action: action_prijimaci_zkousky_datum
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: podminky_prijeti
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: podminky_prijeti
+      - action: action_podminky_prijeti
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: zapisovy_listek
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: zapisovy_listek
+      - action: action_zapisovy_listek
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: zapisovy_listek_sehnat
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: zapisovy_listek_sehnat
+      - action: action_zapisovy_listek_sehnat
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: zapisovy_listek_pocet
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: zapisovy_listek_pocet
+      - action: action_zapisovy_listek_pocet
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: zapisovy_listek_ztrata
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: zapisovy_listek_ztrata
+      - action: action_zapisovy_listek_ztrata
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: zapisovy_listek_kdy
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: zapisovy_listek_kdy
+      - action: action_zapisovy_listek_kdy
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: neprijeti
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: neprijeti
+      - action: action_neprijeti
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: neprijeti_zasady
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: neprijeti_zasady
+      - action: action_neprijeti_zasady
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: studium_na_skole
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: studium_na_skole
+      - action: action_studium_na_skole
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: studium_na_skole_ubytovani
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: studium_na_skole_ubytovani
+      - action: action_studium_na_skole_ubytovani
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: studium_na_skole_finance
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: studium_na_skole_finance
+      - action: action_studium_na_skole_finance
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: studium_na_skole_dalkovy
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: studium_na_skole_dalkovy
+      - action: action_studium_na_skole_dalkovy
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: studium_na_skole_pocet_zaku
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: studium_na_skole_pocet_zaku
+      - action: action_studium_na_skole_pocet_zaku
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: studium_na_skole_maturity
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: studium_na_skole_maturity
+      - action: action_studium_na_skole_maturity
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: studium_na_skole_souteze
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: studium_na_skole_souteze
+      - action: action_studium_na_skole_souteze
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: adaptacni_kurz
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: adaptacni_kurz
+      - action: action_adaptacni_kurz
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: po_skole
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: po_skole
+      - action: action_po_skole
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: kontaktni_udaje_reditelka
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: kontaktni_udaje_reditelka
+      - action: action_kontaktni_udaje_reditelka
+      - intent: rozlouceni
+      - action: action_rozlouceni
+
+  - story: uspesnost_statnich_maturit
+    steps:
+      - intent: pozdrav
+      - action: action_pozdrav
+      - intent: uspesnost_statnich_maturit
+      - action: action_uspesnost_statnich_maturit
+      - intent: rozlouceni
+      - action: action_rozlouceni
